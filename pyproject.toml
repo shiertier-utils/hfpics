@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hfpics"
+version = "0.1.0"
+description = "一个用于从Hugging Face数据集下载图片的Python包"
+readme = "README.md"
+authors = [{ name = "shiertier", email = "junjietext@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Graphics",
+]
+keywords = ["huggingface", "datasets", "images", "download", "cache"]
+dependencies = [
+    "requests>=2.25.0",
+]
+requires-python = ">=3.7"
+
+[project.urls]
+Homepage = "https://github.com/shiertier/hfpics"
+Documentation = "https://github.com/shiertier/hfpics#readme"
+Repository = "https://github.com/shiertier/hfpics.git"
+Issues = "https://github.com/shiertier/hfpics/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"} 
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=22.0",
+    "isort>=5.0",
+    "mypy>=0.900",
+    "build>=0.7.0",
+    "twine>=3.4.0",
+]
